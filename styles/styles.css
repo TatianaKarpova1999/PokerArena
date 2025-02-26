@@ -2664,6 +2664,13 @@ label {
     font-size: 30px;
 }
 
+.blog-read-more {
+    color: #bb0000;
+    margin-bottom: 20px;
+    display: block;
+}
+
+
 .headline.m {
     letter-spacing: -2px;
     font-size: 52px;
@@ -2677,7 +2684,7 @@ label {
 }
 
 .link {
-    color: #ff0095;
+    color: #bb0000;
     letter-spacing: -.015em;
     cursor: pointer;
     font-family: 'Montserrat';
@@ -2813,35 +2820,27 @@ label {
     padding-bottom: 60px;
 
     & .wrapper {
-        background-color: #fff;
-        max-width: 90%;
         border-radius: 20px;
         padding: 50px;
         box-sizing: border-box;
     }
 
     & .headline.tc-white-100 {
-        color: #000;
-        font-size: 50px;
+        color: #fff;
     }
 
     & .tc-white-100 {
-        color: #333
+        color: #fff;
     }
 
     & .body-text-m {
-        color: #333;
-    }
-
-    & .headline.s {
-        font-size: 30px;
+        color: #fff;
     }
 }
 
 #faq {
-    padding: 40px 0;
+    padding: 80px 0;
     background-color: #f7f7f7;
-    padding-top: 200px;
 
     & .g-stack-xl {
         margin-bottom: 60px;
@@ -2877,7 +2876,7 @@ label {
 }
 
 .contacts {
-    background-color: rgb(250, 252, 255);
+    background-color: #f7f7f7;
     transition: 0.2s;
 
     & .tc-white-100 {
@@ -2885,7 +2884,8 @@ label {
     }
 
     & .g-stack-xl {
-        max-width: 400px;
+        align-items: start;
+        text-align: left;
     }
 }
 
@@ -2902,6 +2902,7 @@ label {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 50px;
+    flex-direction: column;
 
     @media (max-width: 767px) {
         padding: 60px 20px;
@@ -2916,8 +2917,7 @@ label {
     padding-top: 50px;
     max-width: 300px;
     display: flex;
-    flex-direction: column;
-    row-gap: 15px;
+    gap: 30px;
 }
 
 .contact-content__info {
@@ -2949,7 +2949,7 @@ label {
 
 .form {
     width: 90%;
-    max-width: 400px;
+
     box-sizing: border-box;
     display: flex;
     align-items: flex-end;
@@ -2981,8 +2981,8 @@ label {
     appearance: none;
     border-radius: 0px;
     border: 1px solid rgba(17, 22, 37, 0.3);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
     color: rgb(17, 22, 37);
-    border-radius: 10px;
 
     &:hover:not(.focus-visible) {
         border: 1px solid rgba(17, 22, 37, 0.6);
@@ -3072,7 +3072,6 @@ label {
 .form__button {
     border-radius: 0px;
     color: rgb(255, 255, 255);
-    background-color: rgb(177, 137, 48);
     text-decoration: none;
     border: none;
     ;
@@ -3091,17 +3090,17 @@ label {
     font-family: 'Montserrat';
 
     &:hover:not(.focus-visible) {
-        background-color: rgb(129, 100, 37);
+        background-color: rgb(124, 0, 0);
         transition: 0.2s;
     }
 
     &:active:not(.focus-visible) {
-        background-color: rgb(89, 69, 25);
+        background-color: rgb(124, 0, 0);
         transition: 0.1s;
     }
 
     &:focus-visible {
-        background-color: rgb(129, 100, 37);
+        background-color: rgb(124, 0, 0);
         transition: 0.2s;
         outline: none;
     }
@@ -3556,7 +3555,7 @@ section-content {
 }
 
 .tournament {
-    background-color: #fff;
+    background-color: #000;
     padding-bottom: 60px;
 
     &.blog {
@@ -3568,7 +3567,10 @@ section-content {
     }
 }
 
-
+.button.button-tour {
+    padding: 10px;
+    margin-top: 30px;
+}
 
 .g-stack-item {
     display: flex;
@@ -3832,7 +3834,7 @@ section-content {
 
 .tournaments-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
     max-width: 1000px;
     margin: 0 auto;
@@ -3841,6 +3843,10 @@ section-content {
 .tournaments-item {
     background-color: #000;
     backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 500px;
 
     h3 {
         font-size: 16px;
@@ -3971,6 +3977,22 @@ section-content {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:hover:not(.focus-visible) {
+        background-color: rgb(124, 0, 0);
+        transition: 0.2s;
+    }
+
+    &:active:not(.focus-visible) {
+        background-color: rgb(124, 0, 0);
+        transition: 0.1s;
+    }
+
+    &:focus-visible {
+        background-color: rgb(124, 0, 0);
+        transition: 0.2s;
+        outline: none;
+    }
 }
 
 .hero-link-container {
@@ -4390,6 +4412,18 @@ footer {
     font-size: 20px;
     line-height: 30px;
     color: #fff;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.blog-post-read-time {
+    font-size: 14px;
+    color: #8c8c8c;
+}
+
+.blog-post-date {
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .footer-wrapper {
