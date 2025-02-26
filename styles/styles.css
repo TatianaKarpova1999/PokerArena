@@ -1546,6 +1546,10 @@ section-content {
         transition: all 0.3s ease 0s;
     }
 
+    & .body-text-m {
+        text-align: center;
+    }
+
 }
 
 .about-list {
@@ -1749,11 +1753,16 @@ section-content {
     }
 
     & .col {
-        width: 70%
+        width: 80%
     }
 
     & .button-app-container {
         justify-content: start;
+    }
+
+    & .g-stack-xl {
+        justify-content: center;
+        align-items: center;
     }
 
 }
