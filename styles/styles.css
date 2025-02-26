@@ -213,8 +213,8 @@ html {
 }
 
 body {
-    color: #333;
-    background-color: #fff;
+    color: #fff;
+    background-color: #000;
     min-height: 100%;
     margin: 0;
     font-family: 'Montserrat', 'Arial', sans-serif;
@@ -1708,9 +1708,7 @@ section-content {
     width: 25%
 }
 
-.col.lg4 {
-    width: 33.3333%
-}
+
 
 .row.g-stack-xl.advantages-grid {
     display: grid;
@@ -1774,6 +1772,21 @@ section-content {
 
 }
 
+.tournament {
+    background-color: #fff;
+    padding-bottom: 60px;
+
+    &.blog {
+        padding-top: 70px;
+    }
+
+    & .g-stack-xl {
+        max-width: 1000px;
+    }
+}
+
+
+
 .g-stack-item {
     display: flex;
     flex-direction: column;
@@ -1797,6 +1810,96 @@ section-content {
         width: 100%;
     }
 }
+
+.section.poker-clash-bg {
+    background: #f7f7f7;
+    padding: 60px 0;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row.poker-clash-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-lg-1.col-display-lg {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .col-lg-1.col-display-lg {
+        display: block;
+    }
+}
+
+.col-lg-4.col-md-3.col-mdl-6.col-sm-2.avc {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.poker-clash-stack {
+    background-color: transparent;
+    border: 2px solid #b90000;
+    padding: 40px;
+    border-radius: 10px;
+
+    & .hero-link-container {
+        align-items: center;
+        margin-bottom: 50px;
+    }
+}
+
+.poker-clash-title {
+    font-size: 36px;
+    color: #b90000;
+    margin-bottom: 20px;
+}
+
+.poker-clash-description {
+    font-size: 16px;
+    color: #000;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.poker-clash-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.poker-clash-list li {
+    color: #706f6f;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+.hero-link-container {
+    margin-top: 30px;
+}
+
+.poker-clash-button {
+    background-color: #ff7f50;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.poker-clash-button:hover {
+    background-color: #ff5722;
+}
+
 
 .about-title {
     color: #fff;
@@ -1941,13 +2044,14 @@ section-content {
 
 .tournaments-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
-    max-width: 50%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .tournaments-item {
-    background-color: transparent;
+    background-color: #000;
     backdrop-filter: blur(5px);
 
     h3 {
