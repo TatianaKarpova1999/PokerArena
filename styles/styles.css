@@ -3239,7 +3239,8 @@ footer {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        margin-top: 30px;
+        margin: 0 auto;
+        margin-top: 20px;
     }
 
     .control {
@@ -3582,7 +3583,6 @@ footer {
 
     .section.hero {
         &::before {
-            background-image: url(../images/hero-icon-mobile.png);
             bottom: -197px;
             top: auto;
             right: -114px;
