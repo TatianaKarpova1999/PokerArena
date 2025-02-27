@@ -315,6 +315,11 @@ textarea {
     transition: .2s opacity ease-in-out;
 }
 
+.animated-button1:hover {
+    opacity: 1;
+}
+
+
 .animated-button1:hover::before {
     opacity: 0.2;
 }
@@ -3176,7 +3181,7 @@ label {
 
     .faq-answer {
         font-size: 12px;
-        padding: 12px;
+
     }
 }
 
@@ -3368,7 +3373,8 @@ section-content {
     }
 }
 
-.tournaments {
+.tournaments,
+.blog-hero {
     & .headline.active {
         animation: left 0.3s;
         transition: all 0.3s ease 0s;
@@ -3582,6 +3588,7 @@ section-content {
 
     & .avc {
         margin: 0 auto;
+        max-width: 800px;
     }
 
 
@@ -3687,7 +3694,7 @@ section-content {
     border: 2px solid #b90000;
     padding: 40px;
     border-radius: 10px;
-    max-width: 650px;
+    max-width: 600px;
     padding: 100px 90px;
 
     & .hero-link-container {
@@ -3795,6 +3802,7 @@ section-content {
 .video {
     iframe {
         width: 100%;
+        height: 100%;
     }
 }
 
@@ -3895,6 +3903,7 @@ section-content {
     flex-direction: column;
     justify-content: space-between;
     max-width: 500px;
+    margin: 0 auto;
 
 
     h3 {
@@ -4261,12 +4270,19 @@ section-content {
 
 @media screen and (max-width: 991px) {
     .row.g-stack-xl.advantages-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .features {
         & .col.md3 {
-            width: 70%;
+            width: 900px;
+        }
+    }
+
+    .features {
+        & .body-text-m {
+            font-size: 25px;
+            font-weight: 500;
         }
     }
 }
@@ -4665,17 +4681,105 @@ footer {
     margin-left: auto;
 }
 
+.video {
+    max-width: 100%;
+}
+
 @media screen and (max-width: 991px) {
     h1 {
-        font-size: 3rem
+        font-size: 25px;
     }
 
     h2 {
-        font-size: 2.625rem
+        font-size: 30px;
     }
 
     h3 {
-        font-size: 2.25rem
+        font-size: 18px;
+    }
+
+    .faq-question {
+
+        p {
+            max-width: auto;
+        }
+    }
+
+
+    .row.g-stack-xl {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team-card {
+        & .headline.xs {
+            font-size: 20px;
+        }
+
+        & .body-text-m {
+            font-size: 14px;
+        }
+    }
+
+    .body-text-l {
+        text-align: center;
+    }
+
+
+    .controls {
+        max-width: 200px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    .control {
+        position: relative;
+        transform: none;
+    }
+
+    .control-prev {
+        transform: rotate(180deg);
+    }
+
+    .w-dyn-items-index {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .blog-index {
+        & .w-dyn-items {
+            max-width: 90%;
+        }
+    }
+
+    .section.l {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .play-title {
+        margin-bottom: 0;
+    }
+
+
+    .section.hero {
+        background-image: linear-gradient(#0809086c, #111211aa), url("../images/hero-bg.jpg");
+    }
+
+    .nav-link {
+        color: #fff;
+
+        &:hover {
+            color: #f00;
+        }
+
+    }
+
+    .animated-button1 {
+        font-size: 14px;
+        padding: 20px;
+        margin: 0;
+
     }
 
     .work-list {
@@ -4736,7 +4840,7 @@ footer {
     }
 
     .col.md4 {
-        width: 66.6667%;
+        max-width: 800px;
         padding-left: 12px;
         padding-right: 12px
     }
@@ -4883,6 +4987,7 @@ footer {
         height: 90px;
     }
 
+
 }
 
 
@@ -4907,13 +5012,53 @@ footer {
         font-size: 1.375rem
     }
 
+    .form {
+        width: 100%;
+    }
+
+    .w-dyn-items {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-question {
+        & p {
+            max-width: 350px;
+        }
+    }
+
+
+    .row.g-stack-xl {
+        grid-template-columns: 1fr;
+    }
+
+    .about-list {
+        & .col.lg4 {
+
+            border: 1px solid #000;
+        }
+
+        & .col.lg4:nth-child(odd) {
+            margin-left: -60px;
+        }
+
+        & .col.lg4:nth-child(even) {
+            margin-left: 60px;
+        }
+    }
+
+    .video {
+        height: 400px;
+    }
+
+    .fixed-block {
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: start;
+    }
+
 
     .avatar.corners-l.size-xl {
         margin: 0 auto;
-    }
-
-    & .button {
-        max-width: 140px;
     }
 
     .tournaments-wrapper {
@@ -4923,6 +5068,13 @@ footer {
     .tournaments-text {
         p {
             font-size: 25px;
+        }
+    }
+
+    .features {
+        & .body-text-m {
+            font-size: 21px;
+            font-weight: 500;
         }
     }
 
@@ -4948,6 +5100,7 @@ footer {
     .hero {
         & .wrapper {
             max-width: 600px;
+            padding: 0;
         }
     }
 
@@ -4973,6 +5126,7 @@ footer {
 
 
     .section.blog {
+        padding: 30px 20px;
 
         & .headline.tc-white-100 {
             font-size: 30px;
@@ -4999,8 +5153,8 @@ footer {
     }
 
     .limitation {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
     }
 
 
@@ -5031,11 +5185,6 @@ footer {
         line-height: 150%;
     }
 
-    .team-card {
-        & .avatar.corners-l.size-xl {
-            display: none;
-        }
-    }
 
     .headline.m {
         font-size: 2.125rem
@@ -5092,7 +5241,25 @@ footer {
     }
 
     .row.g-stack-xl.advantages-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .tc-neutrals-01 {
+        max-width: 600px;
+    }
+
+    .w-dyn-items-index {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-index {
+        & .w-dyn-items {
+            max-width: 500px;
+        }
+    }
+
+    .features-dop-text {
+        font-size: 18px;
     }
 
     .avatar {
@@ -5110,7 +5277,6 @@ footer {
 
 
     .section.blog {
-        padding-top: 120px;
 
         & .headline.s {
             font-size: 18px;
@@ -5119,6 +5285,10 @@ footer {
         & .headline.tc-white-100 {
             font-size: 25px;
         }
+    }
+
+    .blog-post-name {
+        font-size: 18px;
     }
 
     .about-list {
@@ -5139,10 +5309,6 @@ footer {
         grid-row-gap: 16px;
         flex-direction: column;
         align-content: center
-    }
-
-    .footer-wrapper.fose03 {
-        flex-flow: wrap
     }
 
     .footer-wrapper.fobl04t5 {
@@ -5195,6 +5361,51 @@ footer {
         font-size: 1.9375rem
     }
 
+    .tournaments-list {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .about-list {
+        & .col.lg4 {
+
+            border: 1px solid #000;
+        }
+
+        & .col.lg4:nth-child(odd) {
+            margin-left: 0;
+        }
+
+        & .col.lg4:nth-child(even) {
+            margin-left: 0;
+        }
+    }
+
+    .faq-question {
+        font-size: 14px;
+
+        &::before,
+        &::after {
+            right: 40px;
+        }
+
+        p {
+            max-width: 200px;
+        }
+    }
+
+    .faq-item {
+        &.active .faq-answer {
+            height: 100px;
+        }
+    }
+
+    .about {
+        & .body-text-m {
+            font-size: 18px;
+        }
+    }
+
     footer {
         & .row.g-stack-xl {
             flex-direction: column;
@@ -5228,11 +5439,6 @@ footer {
     .headline.l {
         letter-spacing: -.05rem;
         font-size: 2.125rem
-    }
-
-    .headline.s {
-        font-size: 20px;
-        line-height: 1.2
     }
 
     .headline.m {
@@ -5288,7 +5494,9 @@ footer {
     }
 
     .footer-wrapper.fose03 {
-        justify-content: space-between
+        justify-content: space-between;
+        row-gap: 30px;
+
     }
 
     .footer-wrapper.fobl04t5 {
