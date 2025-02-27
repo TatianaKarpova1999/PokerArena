@@ -2772,7 +2772,7 @@ label {
 
 .section.s {
     padding-top: 48px;
-    padding-bottom: 48px
+    padding-bottom: 100px
 }
 
 .section.l {
@@ -4683,6 +4683,7 @@ footer {
 
 .video {
     max-width: 100%;
+    height: 500px;
 }
 
 @media screen and (max-width: 991px) {
@@ -4798,6 +4799,10 @@ footer {
             transform: rotate(90deg) translateY(-50%);
             animation: top-bottom 2s infinite;
         }
+    }
+
+    .section.s {
+        padding-bottom: 200px;
     }
 
 
