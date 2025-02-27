@@ -2556,23 +2556,23 @@ a {
     max-width: 1200px;
 
     h1 {
-        margin-bottom: 80px;
+        margin-bottom: 50px;
         line-height: 150%;
         font-size: 30px;
-        color: #fff;
+        color: #000;
     }
 
     h2 {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         line-height: 150%;
         font-size: 25px;
-        color: #fff;
+        color: #000;
     }
 
     p {
         max-width: 1000px;
         line-height: 150%;
-        color: #fff;
+        color: #000;
     }
 
     div {
@@ -2580,7 +2580,7 @@ a {
     }
 
     a {
-        color: #fff;
+        color: #000;
     }
 
     & .button.primary-button {
@@ -2700,11 +2700,6 @@ label {
 .link:hover {
     color: var(--light-pink);
     text-decoration: none
-}
-
-.link:focus {
-    border-top: 1px solid var(--pink-02);
-    border-bottom: 1px solid var(--pink-02)
 }
 
 .link:focus-visible {
@@ -3396,6 +3391,12 @@ section-content {
     }
 }
 
+.team-card {
+    & .body-text-m {
+        font-size: 16px;
+    }
+}
+
 .tournaments-prise {
     & .tournaments-text.active {
         animation: bottom 0.3s;
@@ -3606,6 +3607,10 @@ section-content {
         row-gap: 40px;
     }
 
+    & .team-card {
+        border: none;
+    }
+
 }
 
 .tournament {
@@ -3640,6 +3645,7 @@ section-content {
     & .g-stack-xl {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        max-width: 100%;
     }
 
     & .wrapper {
@@ -3653,7 +3659,18 @@ section-content {
 
     & .g-stack-item {
         align-items: center;
+        padding: 20px;
     }
+
+
+    @media screen and (max-width: 1200px) {
+        & .g-stack-xl {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 100%;
+        }
+    }
+
 }
 
 .section.poker-clash-bg {
@@ -4076,9 +4093,10 @@ section-content {
 }
 
 .avatar.corners-l.size-xl {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     margin-bottom: auto;
+    margin-bottom: 10px;
 }
 
 .dropdown-link.secondary:focus-visible {
@@ -4549,7 +4567,7 @@ footer {
     border-radius: 16px;
     width: 100%;
     height: 100%;
-    padding: 24px;
+    border: 1px solid #7c7c7c;
 
     & .g-stack-xl {
         align-items: center;
@@ -4987,8 +5005,8 @@ footer {
 
 
     .avatar.corners-l.size-xl {
-        width: 90px;
-        height: 90px;
+        width: 70px;
+        height: 70px;
     }
 
 
@@ -5054,10 +5072,7 @@ footer {
     }
 
     .about-list {
-        & .col.lg4 {
 
-            border: 1px solid #000;
-        }
 
         & .col.lg4:nth-child(odd) {
             margin-left: -60px;
@@ -5406,10 +5421,7 @@ footer {
     }
 
     .about-list {
-        & .col.lg4 {
 
-            border: 1px solid #000;
-        }
 
         & .col.lg4:nth-child(odd) {
             margin-left: 0;
